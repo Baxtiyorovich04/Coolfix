@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { FaBolt, FaShieldAlt, FaMoneyBillWave, FaTools } from "react-icons/fa"
 import styles from "./Hero.module.scss"
 
 export default function Hero() {
@@ -8,26 +9,36 @@ export default function Hero() {
         <div className={styles.content}>
           <h1 className={styles.title}>Быстрый и надежный ремонт техники</h1>
           <p className={styles.subtitle}>Профессиональный сервис с гарантией качества и доступными ценами</p>
+          
           <div className={styles.highlights}>
             <div className={styles.highlight}>
-              <span className={styles.icon}>⚡</span>
+              <FaBolt className={styles.icon} />
               <span>Быстрый ремонт</span>
             </div>
             <div className={styles.highlight}>
-              <span className={styles.icon}>🛡️</span>
+              <FaShieldAlt className={styles.icon} />
               <span>Гарантия 1 год</span>
             </div>
             <div className={styles.highlight}>
-              <span className={styles.icon}>💰</span>
+              <FaMoneyBillWave className={styles.icon} />
               <span>Доступные цены</span>
             </div>
           </div>
-          <Link href="#contacts" className={styles.button}>
-            Заказать ремонт
-          </Link>
+          
+          <div className={styles.buttons}>
+            <Link href="#contacts" className={`${styles.button} ${styles.primary}`}>
+              Заказать ремонт
+            </Link>
+            <Link href="#benefits" className={`${styles.button} ${styles.secondary}`}>
+              Наши преимущества
+            </Link>
+          </div>
         </div>
+        
         <div className={styles.imageContainer}>
-          <div className={styles.image}></div>
+          <div className={styles.image}>
+            <FaTools className={styles.toolsIcon} />
+          </div>
         </div>
       </div>
     </section>

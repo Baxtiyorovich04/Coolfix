@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaTools, FaLaptop, FaTabletAlt, FaHome } from "react-icons/fa"
 import styles from "./Footer.module.scss"
 
 export default function Footer() {
@@ -8,10 +9,13 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.top}>
-          <div className={styles.logo}>
-            <Link href="/">
-              <span className={styles.logoText}>Coolfix</span>
-            </Link>
+          <div className={styles.brand}>
+            <div className={styles.logo}>
+              <Link href="/">
+                <span className={styles.logoText}>Coolfix</span>
+              </Link>
+            </div>
+            <p className={styles.tagline}>Профессиональный ремонт техники с гарантией качества</p>
           </div>
 
           <div className={styles.links}>
@@ -19,16 +23,28 @@ export default function Footer() {
               <h4>Услуги</h4>
               <ul>
                 <li>
-                  <Link href="#">Ремонт смартфонов</Link>
+                  <Link href="#">
+                    <FaTools className={styles.linkIcon} />
+                    Ремонт смартфонов
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#">Ремонт ноутбуков</Link>
+                  <Link href="#">
+                    <FaLaptop className={styles.linkIcon} />
+                    Ремонт ноутбуков
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#">Ремонт планшетов</Link>
+                  <Link href="#">
+                    <FaTabletAlt className={styles.linkIcon} />
+                    Ремонт планшетов
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#">Ремонт бытовой техники</Link>
+                  <Link href="#">
+                    <FaHome className={styles.linkIcon} />
+                    Ремонт бытовой техники
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -55,13 +71,25 @@ export default function Footer() {
               <h4>Контакты</h4>
               <ul>
                 <li>
-                  <a href="tel:+71234567890">+7 (123) 456-7890</a>
+                  <a href="tel:+71234567890">
+                    <FaPhone className={styles.linkIcon} />
+                    +7 (123) 456-7890
+                  </a>
                 </li>
                 <li>
-                  <a href="mailto:info@coolfix.com">info@coolfix.com</a>
+                  <a href="mailto:info@coolfix.com">
+                    <FaEnvelope className={styles.linkIcon} />
+                    info@coolfix.com
+                  </a>
                 </li>
-                <li>г. Москва, ул. Примерная, д. 123</li>
-                <li>Ежедневно: 9:00 - 20:00</li>
+                <li>
+                  <FaMapMarkerAlt className={styles.linkIcon} />
+                  г. Москва, ул. Примерная, д. 123
+                </li>
+                <li>
+                  <FaClock className={styles.linkIcon} />
+                  Ежедневно: 9:00 - 20:00
+                </li>
               </ul>
             </div>
           </div>

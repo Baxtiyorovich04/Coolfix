@@ -1,7 +1,48 @@
-$primary: #003366;
-$accent: #66b2ff;
-$text-main: #1a1a1a;
-$text-secondary: #555555;
+// variables.scss
+// Color system
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+$primary: #4e73df;
+$accent: #1cc88a;
 $bg-light: #ffffff;
-$button: #0066cc;
-$button-hover: #004c99;
+$bg-dark: #1a1a1a;
+$text-main: #333333;
+$text-dark: #f0f0f0;
+// Theme colors
+$primary:       #4e73df;
+$secondary:     #858796;
+$accent:        #1cc88a;
+$success:       #1cc88a;
+$info:          #36b9cc;
+$warning:       #f6c23e;
+$danger:        #e74a3b;
+$light:         #f8f9fc;
+$dark:          #5a5c69;
+
+// Buttons
+$button:        $primary;
+$button-hover:  darken($primary, 10%);
+
+// Body
+$body-bg:                   $white;
+$body-color:                $gray-900;
+
+// Text
+$text-primary:              $gray-900;
+$text-secondary:            $gray-600;
+
+// Backgrounds
+$bg-light:                  $gray-100;
+$bg-dark:                  $gray-900;
+
+// Spacing
+$spacer: 1rem;

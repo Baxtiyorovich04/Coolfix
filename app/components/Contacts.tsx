@@ -1,28 +1,50 @@
-import styles from "./Contacts.module.scss"
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaArrowRight } from "react-icons/fa";
+import styles from "./Contacts.module.scss";
 
 export default function Contacts() {
   const phoneNumbers = [
     { number: "+7 (123) 456-7890", label: "Основной" },
     { number: "+7 (987) 654-3210", label: "Сервисный центр" },
-  ]
+  ];
 
   const contactMethods = [
-    { icon: "📱", title: "Позвоните нам", description: "Мы ответим на все ваши вопросы" },
-    { icon: "📧", title: "Напишите нам", description: "Отправьте заявку на почту" },
-    { icon: "🏢", title: "Посетите нас", description: "Приходите в наш сервисный центр" },
-  ]
+    { 
+      icon: <FaPhone size={24} />, 
+      title: "Позвоните нам", 
+      description: "Мы ответим на все ваши вопросы",
+      color: "#4e73df"
+    },
+    { 
+      icon: <FaEnvelope size={24} />, 
+      title: "Напишите нам", 
+      description: "Отправьте заявку на почту",
+      color: "#1cc88a"
+    },
+    { 
+      icon: <FaMapMarkerAlt size={24} />, 
+      title: "Посетите нас", 
+      description: "Приходите в наш сервисный центр",
+      color: "#f6c23e"
+    },
+  ];
 
   return (
     <section id="contacts" className={styles.contacts}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Свяжитесь с нами</h2>
-        <p className={styles.subtitle}>Мы всегда готовы помочь вам с ремонтом</p>
+        <div className={styles.header}>
+          <h2 className={styles.title}>Свяжитесь с нами</h2>
+          <p className={styles.subtitle}>Мы всегда готовы помочь вам с ремонтом</p>
+          <div className={styles.divider}></div>
+        </div>
 
         <div className={styles.contactsGrid}>
           {contactMethods.map((method, index) => (
             <div key={index} className={styles.contactCard}>
-              <div className={styles.iconWrapper}>
-                <span className={styles.icon}>{method.icon}</span>
+              <div 
+                className={styles.iconWrapper}
+                style={{ backgroundColor: `${method.color}20`, color: method.color }}
+              >
+                {method.icon}
               </div>
               <h3 className={styles.contactTitle}>{method.title}</h3>
               <p className={styles.description}>{method.description}</p>
@@ -42,16 +64,20 @@ export default function Contacts() {
 
               {index === 1 && (
                 <a href="mailto:info@coolfix.com" className={styles.contactButton}>
-                  Написать письмо
+                  Написать письмо <FaArrowRight className={styles.buttonIcon} />
                 </a>
               )}
 
               {index === 2 && (
-                <address className={styles.address}>
-                  г. Москва, ул. Примерная, д. 123
-                  <br />
-                  Ежедневно: 9:00 - 20:00
-                </address>
+                <div className={styles.addressWrapper}>
+                  <address className={styles.address}>
+                    г. Москва, ул. Примерная, д. 123
+                  </address>
+                  <div className={styles.workingHours}>
+                    <FaClock className={styles.clockIcon} />
+                    <span>Ежедневно: 9:00 - 20:00</span>
+                  </div>
+                </div>
               )}
             </div>
           ))}
@@ -59,11 +85,12 @@ export default function Contacts() {
 
         <div className={styles.callToAction}>
           <h3>Нужен срочный ремонт?</h3>
+          <p>Наши мастера готовы выехать к вам в течение часа</p>
           <a href="tel:+71234567890" className={styles.actionButton}>
-            Позвонить сейчас
+            Позвонить сейчас <FaArrowRight className={styles.buttonIcon} />
           </a>
         </div>
       </div>
     </section>
-  )
+  );
 }
