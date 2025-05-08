@@ -17,7 +17,7 @@ export default function Hero() {
             </div>
             <div className={styles.highlight}>
               <FaShieldAlt className={styles.icon} />
-              <span>Гарантия 1 год</span>
+              <span>Гарантия 3-6 месяцев</span>
             </div>
             <div className={styles.highlight}>
               <FaMoneyBillWave className={styles.icon} />

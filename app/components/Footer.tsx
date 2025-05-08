@@ -25,25 +25,20 @@ export default function Footer() {
                 <li>
                   <Link href="#">
                     <FaTools className={styles.linkIcon} />
-                    Ремонт смартфонов
+                    Ремонт кондиционеров 
                   </Link>
                 </li>
                 <li>
                   <Link href="#">
-                    <FaLaptop className={styles.linkIcon} />
-                    Ремонт ноутбуков
+                    <FaTools className={styles.linkIcon} />
+                    Ремонт стиральных машин 
                   </Link>
                 </li>
-                <li>
-                  <Link href="#">
-                    <FaTabletAlt className={styles.linkIcon} />
-                    Ремонт планшетов
-                  </Link>
-                </li>
+           
                 <li>
                   <Link href="#">
                     <FaHome className={styles.linkIcon} />
-                    Ремонт бытовой техники
+                    Ремонт двухконтурных котлов
                   </Link>
                 </li>
               </ul>
@@ -55,9 +50,7 @@ export default function Footer() {
                 <li>
                   <Link href="#">О нас</Link>
                 </li>
-                <li>
-                  <Link href="#benefits">Преимущества</Link>
-                </li>
+           
                 <li>
                   <Link href="#contacts">Контакты</Link>
                 </li>
@@ -71,24 +64,21 @@ export default function Footer() {
               <h4>Контакты</h4>
               <ul>
                 <li>
-                  <a href="tel:+71234567890">
+                  <a href="tel:+998946221958">
                     <FaPhone className={styles.linkIcon} />
-                    +7 (123) 456-7890
+                    +998 90 941 85 65
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@coolfix.com">
+                  <a href="https://t.me/+998909418565">
                     <FaEnvelope className={styles.linkIcon} />
-                    info@coolfix.com
+                    t.me/coolfix_uz
                   </a>
                 </li>
-                <li>
-                  <FaMapMarkerAlt className={styles.linkIcon} />
-                  г. Москва, ул. Примерная, д. 123
-                </li>
+              
                 <li>
                   <FaClock className={styles.linkIcon} />
-                  Ежедневно: 9:00 - 20:00
+                  Ежедневно: 8:00 - 20:00
                 </li>
               </ul>
             </div>

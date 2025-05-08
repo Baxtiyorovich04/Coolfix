@@ -4,38 +4,29 @@
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: $bg-light;
+  background-color: $white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 100;
-  transition: background-color 0.3s ease;
-
-  .dark & {
-    background-color: $bg-dark;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  }
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  
   .logoText {
     font-size: 1.8rem;
     font-weight: 700;
     color: $primary;
     transition: color 0.3s ease;
-
-    .dark & {
-      color: lighten($primary, 10%);
+    
+    &:hover {
+      color: darken($primary, 10%);
     }
   }
 }
@@ -46,10 +37,9 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    gap: 2rem;
     
     li {
-      margin: 0 1rem;
-      
       a {
         color: $text-primary;
         font-weight: 500;
@@ -57,15 +47,7 @@
         position: relative;
         
         &:hover {
-          color: $accent;
-        }
-
-        .dark & {
-          color: $white;
-
-          &:hover {
-            color: lighten($accent, 10%);
-          }
+          color: $primary;
         }
 
         &::after {
@@ -75,12 +57,8 @@
           left: 0;
           width: 0;
           height: 2px;
-          background-color: $accent;
+          background-color: $primary;
           transition: width 0.3s ease;
-
-          .dark & {
-            background-color: lighten($accent, 10%);
-          }
         }
 
         &:hover::after {
@@ -91,77 +69,61 @@
   }
 }
 
-.controls {
-  display: flex;
+.desktopCallButton {
+  .button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 1.2rem;
+    background-color: $primary;
+    color: white;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    gap: 0.5rem;
+    
+    &:hover {
+      background-color: darken($primary, 10%);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.mobileControls {
+  display: none;
   align-items: center;
   gap: 1rem;
 }
 
-.modeToggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: $text-primary;
-  padding: 0.5rem;
-  border-radius: 50%;
+.mobileCallButton {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
-  
-  &:hover {
-    color: $accent;
-    background-color: rgba($accent, 0.1);
-  }
-
-  .dark & {
-    color: $white;
-
-    &:hover {
-      color: lighten($accent, 10%);
-      background-color: rgba($accent, 0.2);
-    }
-  }
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.6rem 1.2rem;
-  background-color: $button;
+  width: 40px;
+  height: 40px;
+  background-color: $primary;
   color: white;
-  border-radius: 4px;
-  font-weight: 500;
+  border-radius: 50%;
   transition: all 0.3s ease;
-  text-decoration: none;
-  gap: 0.5rem;
   
   &:hover {
-    background-color: $button-hover;
-    transform: translateY(-2px);
-  }
-
-  .dark & {
-    background-color: darken($button, 10%);
-
-    &:hover {
-      background-color: $button-hover;
-    }
+    background-color: darken($primary, 10%);
+    transform: scale(1.05);
   }
 }
 
 .phoneIcon {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .mobileMenuButton {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
-  height: 21px;
+  height: 24px;
   cursor: pointer;
   z-index: 101;
+  position: relative;
   
   span {
     height: 3px;
@@ -170,10 +132,6 @@
     border-radius: 3px;
     transition: all 0.3s ease;
     transform-origin: left center;
-
-    .dark & {
-      background-color: $white;
-    }
   }
 
   &.open {
@@ -191,27 +149,23 @@
   }
 }
 
-@media (max-width: 768px) {
-  .mobileMenuButton {
-    display: flex;
-  }
-  
+@media (max-width: 992px) {
   .nav {
     position: fixed;
     top: 70px;
     left: 0;
     width: 100%;
-    background-color: $bg-light;
-    padding: 2rem 0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: $white;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(-150%);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     
-    .dark & {
-      background-color: $bg-dark;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    ul {
+      flex-direction: column;
+      gap: 1.5rem;
     }
 
     &.active {
@@ -219,34 +173,39 @@
       opacity: 1;
       visibility: visible;
     }
-    
-    ul {
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-      
-      li {
-        margin: 0;
-      }
-    }
   }
 
-  .controls {
-    gap: 0.5rem;
+  .mobileControls {
+    display: flex;
   }
 
-  .button {
-    padding: 0.5rem 0.8rem;
-    font-size: 0.9rem;
+  .desktopCallButton {
+    display: none;
+  }
+}
 
-    span {
-      display: none;
-    }
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .logoText {
+    font-size: 1.5rem !important;
   }
 }
 
 @media (max-width: 480px) {
-  .logoText {
-    font-size: 1.5rem !important;
+  .nav {
+    top: 60px;
+    padding: 1.5rem;
+  }
+  
+  .mobileControls {
+    gap: 0.5rem;
+  }
+  
+  .mobileCallButton {
+    width: 36px;
+    height: 36px;
   }
 }

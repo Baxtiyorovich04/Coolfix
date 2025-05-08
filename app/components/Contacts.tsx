@@ -1,10 +1,11 @@
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaArrowRight } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaArrowRight, FaShieldAlt } from "react-icons/fa";
+import { FaTelegram } from "react-icons/fa6";
 import styles from "./Contacts.module.scss";
 
 export default function Contacts() {
   const phoneNumbers = [
-    { number: "+7 (123) 456-7890", label: "Основной" },
-    { number: "+7 (987) 654-3210", label: "Сервисный центр" },
+    { number: "+998 90 941 85 65", label: "Основной" },
+    { number: "+998 94 622 19 58", label: "Telegram" },
   ];
 
   const contactMethods = [
@@ -15,16 +16,16 @@ export default function Contacts() {
       color: "#4e73df"
     },
     { 
-      icon: <FaEnvelope size={24} />, 
-      title: "Напишите нам", 
-      description: "Отправьте заявку на почту",
-      color: "#1cc88a"
+      icon: <FaTelegram size={24} />, 
+      title: "Напишите в Telegram", 
+      description: "Быстрый ответ в мессенджере",
+      color: "#0088cc"
     },
     { 
-      icon: <FaMapMarkerAlt size={24} />, 
-      title: "Посетите нас", 
-      description: "Приходите в наш сервисный центр",
-      color: "#f6c23e"
+      icon: <FaShieldAlt size={24} />, 
+      title: "Гарантия качества", 
+      description: "Профессиональный ремонт ",
+      color: "#1cc88a"
     },
   ];
 
@@ -63,20 +64,20 @@ export default function Contacts() {
               )}
 
               {index === 1 && (
-                <a href="mailto:info@coolfix.com" className={styles.contactButton}>
-                  Написать письмо <FaArrowRight className={styles.buttonIcon} />
+                <a href="https://t.me/+998909418565" className={styles.contactButton}>
+                  Написать в Telegram <FaArrowRight className={styles.buttonIcon} />
                 </a>
               )}
 
               {index === 2 && (
                 <div className={styles.addressWrapper}>
-                  <address className={styles.address}>
-                    г. Москва, ул. Примерная, д. 123
-                  </address>
                   <div className={styles.workingHours}>
                     <FaClock className={styles.clockIcon} />
-                    <span>Ежедневно: 9:00 - 20:00</span>
+                    <span>Гарантия на ремонт с 3 до 6 месяцев</span>
                   </div>
+                  <p className={styles.description}>
+                    Используем только оригинальные запчасти
+                  </p>
                 </div>
               )}
             </div>
@@ -86,7 +87,7 @@ export default function Contacts() {
         <div className={styles.callToAction}>
           <h3>Нужен срочный ремонт?</h3>
           <p>Наши мастера готовы выехать к вам в течение часа</p>
-          <a href="tel:+71234567890" className={styles.actionButton}>
+          <a href="tel:+998909418565" className={styles.actionButton}>
             Позвонить сейчас <FaArrowRight className={styles.buttonIcon} />
           </a>
         </div>

@@ -24,7 +24,7 @@ export default function Benefits() {
     {
       icon: <FaTruck size={24} />,
       title: "Выезд на дом",
-      description: "Бесплатный выезд мастера в удобное для вас время",
+      description: "Бесплатный выезд мастера если будеть ремонт. Без ремонта 100.000 сум",
       color: "#f6c23e"
     },
     {
