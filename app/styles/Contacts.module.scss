@@ -1,0 +1,178 @@
+@import './variables.scss';
+
+.contacts {
+  padding: 5rem 0;
+  background-color: lighten($primary, 70%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: $primary;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: $text-secondary;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contactsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contactCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  background-color: lighten($accent, 25%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.contactTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: $primary;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: $text-secondary;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.phoneNumbers {
+  width: 100%;
+}
+
+.phoneItem {
+  margin-bottom: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.phoneLink {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: $primary;
+  
+  &:hover {
+    color: $accent;
+  }
+}
+
+.phoneLabel {
+  font-size: 0.8rem;
+  color: $text-secondary;
+}
+
+.contactButton {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: $button;
+  color: white;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: $button-hover;
+  }
+}
+
+.address {
+  font-style: normal;
+  line-height: 1.6;
+  color: $text-secondary;
+}
+
+.callToAction {
+  background-color: $primary;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.actionButton {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: white;
+  color: $primary;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+  &:hover {
+    background-color: lighten($accent, 30%);
+    color: $primary;
+  }
+}
+
+@media (max-width: 992px) {
+  .contactsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    padding: 4rem 0;
+  }
+  
+  .contactsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+}
