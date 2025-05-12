@@ -28,6 +28,15 @@ export const metadata = {
     'Ремонт холодильников',
     'Ташкент',
     'Coolfix',
+    'coolfix',
+    'coolfix.uz',
+    'кульфикс',
+    'coolfix toshkent',
+    'кульфикс ташкент',
+    'кульфикс ташкент ремонт',
+    'кульфикс ташкент обслуживание',
+    'кульфикс ташкент установка',
+    'кульфикс ташкент заправка',
     'обслуживание кондиционеров',
     'установка кондиционеров',
     'ремонт бытовой техники',
@@ -45,6 +54,13 @@ export const metadata = {
     'Техническое обслуживание кондиционеров',
     'Экспресс ремонт холодильников и морозильников',
     'Срочный ремонт стиральных машин в Ташкенте',
+    'кульфикс',
+    'кульфикс ташкент',
+    'кульфикс ташкент ремонт',
+    'кульфикс ташкент обслуживание',
+    'кульфикс ташкент установка',
+    'кульфикс ташкент заправка',
+    
     // Uzbek keywords
     'Konditsioner ta\'mirlash',
     'Muzlatkich ta\'mirlash',
@@ -72,7 +88,7 @@ export const metadata = {
     'Konditsioner freon zaryadlash',
     'Muzlatkich termostat va dvigatel ta\'mirlash'
   ],
-  authors: [{ name: 'Coolfix' }],
+  authors: [{ name: 'Baxtiyorovich' }],
   creator: 'Coolfix',
   publisher: 'Coolfix',
   robots: {
