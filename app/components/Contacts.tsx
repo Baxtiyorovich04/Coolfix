@@ -1,4 +1,4 @@
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaArrowRight, FaShieldAlt } from "react-icons/fa";
+import { FaPhone, FaEnvelope,  FaClock, FaArrowRight, FaShieldAlt } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa6";
 import styles from "./Contacts.module.scss";
 

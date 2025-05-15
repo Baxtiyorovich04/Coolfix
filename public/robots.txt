@@ -1,3 +1,26 @@
 User-agent: *
 Allow: /
-Sitemap: https://coolfix.uz/sitemap.xml 
+
+# Запрещаем индексацию дублирующихся URL с параметрами
+Disallow: /*?*
+Disallow: /*?utm_*
+Disallow: /*?ref=*
+
+# Разрешаем индексацию основных страниц
+Allow: /$
+Allow: /services$
+Allow: /contacts$
+Allow: /about$
+
+# Указываем расположение sitemap
+Sitemap: https://coolfix.uz/sitemap.xml
+
+# Дополнительные правила для Google
+User-agent: Googlebot
+Allow: /
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.gif
+Allow: /*.svg 
