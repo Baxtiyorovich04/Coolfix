@@ -1,4 +1,5 @@
 import { FaTools } from 'react-icons/fa'
+import Loading from './components/Loading'
 
 export const metadata = {
   title: {
@@ -9,17 +10,18 @@ export const metadata = {
   alternates: {
     canonical: 'https://coolfix.uz',
   },
+  metadataBase: new URL('https://coolfix.uz'),
   icons: {
     icon: [
-      { url: 'data:image/svg+xml;utf8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M501.1 395.7L384 278.6c-23.1-23.1-57.6-27.6-85.4-13.9L192 158.1V96L64 0 0 64l96 128h62.1l106.6 106.6c-13.6 27.8-9.2 62.3 13.9 85.4l117.1 117.1c14.6 14.6 38.2 14.6 52.7 0l52.7-52.7c14.5-14.6 14.5-38.2 0-52.7zM331.7 225c28.3 0 54.9 11 74.9 31l19.4 19.4c15.8-6.9 30.8-16.5 43.8-29.5 37.1-37.1 49.7-89.3 37.9-136.7-2.2-9-13.5-12.1-20.1-5.5l-32.8 32.8c-3 3-7.1 4.7-11.3 4.7s-8.3-1.7-11.3-4.7l-96-96c-3-3-4.7-7.1-4.7-11.3s1.7-8.3 4.7-11.3l32.8-32.8c6.6-6.6 3.4-17.9-5.7-20.2-47.4-11.7-99.6.9-136.6 37.9-28.5 28.5-41.9 66.1-41.2 103.6l82.1 82.1c8.1-1.9 16.5-2.9 24.7-2.9zm-103.9 82l-56.7-56.7L18.7 402.8c-25 25-25 65.5 0 90.5s65.5 25 90.5 0l123.6-123.6c-7.6-19.9-9.9-41.6-5-62.7zM64 472c-13.2 0-24-10.8-24-24 0-13.3 10.7-24 24-24s24 10.7 24 24c0 13.2-10.7 24-24 24z"/></svg>'), type: 'image/svg+xml' }
+      { url: '/icon.svg', type: 'image/svg+xml' }
     ],
     apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+      { url: '/icon.svg', type: 'image/svg+xml' }
     ],
     other: [
       {
         rel: 'mask-icon',
-        url: '/safari-pinned-tab.svg',
+        url: '/icon.svg',
         color: '#4e73df'
       }
     ]
@@ -142,12 +144,22 @@ export default function RootLayout({
     <html lang="ru">
       <head>
         <link rel="canonical" href="https://coolfix.uz" />
-        <link rel="icon" href={metadata.icons.icon[0].url} type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        
+        {/* Favicon */}
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/icon.svg" />
         <link rel="manifest" href="/site.webmanifest" />
+        
         <meta name="theme-color" content="#4e73df" />
+        <meta name="msapplication-TileColor" content="#4e73df" />
+        <meta name="msapplication-TileImage" content="/icon.svg" />
       </head>
-      <body>{children}</body>
+      <body>
+        <Loading />
+        {children}
+      </body>
     </html>
   )
 }

@@ -24,7 +24,7 @@ const nextConfig = {
         permanent: true,
         destination: '/:path*',
       },
-      // Редирект с www на без www
+      // Redirect www to non-www
       {
         source: '/:path*',
         has: [
@@ -51,10 +51,17 @@ const nextConfig = {
             key: 'Link',
             value: '<https://coolfix.uz>; rel="canonical"',
           },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, must-revalidate',
+          },
         ],
       },
     ]
   },
+  poweredByHeader: false,
+  compress: true,
+  reactStrictMode: true,
 }
 
 export default nextConfig;

@@ -1,5 +1,30 @@
+# Allow all crawlers
 User-agent: *
 Allow: /
+
+# Allow Googlebot specifically
+User-agent: Googlebot
+Allow: /
+
+# Allow Googlebot-Image
+User-agent: Googlebot-Image
+Allow: /
+
+# Allow Googlebot-Mobile
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Allow all assets
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
+
+# Sitemap location
+Sitemap: https://coolfix.uz/sitemap.xml
 
 # Запрещаем индексацию дублирующихся URL с параметрами
 Disallow: /*?*
@@ -10,17 +35,4 @@ Disallow: /*?ref=*
 Allow: /$
 Allow: /services$
 Allow: /contacts$
-Allow: /about$
-
-# Указываем расположение sitemap
-Sitemap: https://coolfix.uz/sitemap.xml
-
-# Дополнительные правила для Google
-User-agent: Googlebot
-Allow: /
-Allow: /*.js
-Allow: /*.css
-Allow: /*.png
-Allow: /*.jpg
-Allow: /*.gif
-Allow: /*.svg 
+Allow: /about$ 
