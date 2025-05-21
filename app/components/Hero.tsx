@@ -7,7 +7,7 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <h1 className={styles.title}>Быстрый и надежный ремонт техники</h1>
+          <h1 className={styles.title}>Ремонт кондиционеров в Ташкенте с бесплатным выездом</h1>
           <p className={styles.subtitle}>Профессиональный сервис с гарантией качества и доступными ценами</p>
           
           <div className={styles.highlights}>
