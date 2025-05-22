@@ -97,7 +97,7 @@ export const metadata = {
     images: ['https://coolfix.uz/og-image.jpg'],
   },
   verification: {
-    google: 'your-google-site-verification',
+    google: 'google0f56ed170fd28215',
     yandex: 'your-yandex-verification',
   },
 }
@@ -111,8 +111,13 @@ export default function RootLayout({
     <html lang="ru">
       <head>
         <link rel="canonical" href="https://coolfix.uz" />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="google" content="notranslate" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         
         {/* Favicon */}
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />

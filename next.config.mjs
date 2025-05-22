@@ -45,11 +45,53 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Robots-Tag',
-            value: 'index, follow',
+            value: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
           },
           {
             key: 'Link',
             value: '<https://coolfix.uz>; rel="canonical"',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, must-revalidate',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+        ],
+      },
+      {
+        source: '/robots.txt',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'text/plain',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/sitemap.xml',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/xml',
           },
           {
             key: 'Cache-Control',
