@@ -30,11 +30,11 @@ const nextConfig = {
         has: [
           {
             type: 'host',
-            value: 'www.coolfix.uz',
+            value: 'www.thecoolfix.uz',
           },
         ],
         permanent: true,
-        destination: 'https://coolfix.uz/:path*',
+        destination: 'https://thecoolfix.uz/:path*',
       },
     ]
   },
@@ -45,11 +45,11 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Robots-Tag',
-            value: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+            value: 'index, follow',
           },
           {
             key: 'Link',
-            value: '<https://coolfix.uz>; rel="canonical"',
+            value: '<https://thecoolfix.uz>; rel="canonical"',
           },
           {
             key: 'Cache-Control',

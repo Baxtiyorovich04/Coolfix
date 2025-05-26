@@ -110,9 +110,12 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <head>
-        <link rel="canonical" href="https://coolfix.uz" />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        {/* Basic SEO */}
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://thecoolfix.uz/" />
+        
+        {/* Additional meta tags */}
+        <meta name="googlebot" content="index, follow" />
         <meta name="google" content="notranslate" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />

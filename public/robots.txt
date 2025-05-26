@@ -1,6 +1,9 @@
 # Allow all crawlers
 User-agent: *
-Allow: /
+Disallow:
+
+# Sitemap location
+Sitemap: https://thecoolfix.uz/sitemap.xml
 
 # Allow Googlebot specifically
 User-agent: Googlebot
@@ -22,9 +25,6 @@ Allow: /*.jpg
 Allow: /*.gif
 Allow: /*.svg
 Allow: /*.ico
-
-# Sitemap location
-Sitemap: https://coolfix.uz/sitemap.xml
 
 # Запрещаем индексацию дублирующихся URL с параметрами
 Disallow: /*?*
