@@ -1,9 +1,23 @@
 # Allow all crawlers
 User-agent: *
-Disallow:
+Allow: /
 
 # Sitemap location
 Sitemap: https://thecoolfix.uz/sitemap.xml
+
+# Allow all assets
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
+
+# Disallow URL parameters
+Disallow: /*?*
+Disallow: /*?utm_*
+Disallow: /*?ref=*
 
 # Allow Googlebot specifically
 User-agent: Googlebot
@@ -16,20 +30,6 @@ Allow: /
 # Allow Googlebot-Mobile
 User-agent: Googlebot-Mobile
 Allow: /
-
-# Allow all assets
-Allow: /*.js
-Allow: /*.css
-Allow: /*.png
-Allow: /*.jpg
-Allow: /*.gif
-Allow: /*.svg
-Allow: /*.ico
-
-# Запрещаем индексацию дублирующихся URL с параметрами
-Disallow: /*?*
-Disallow: /*?utm_*
-Disallow: /*?ref=*
 
 # Разрешаем индексацию основных страниц
 Allow: /$

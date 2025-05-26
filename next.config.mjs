@@ -97,6 +97,10 @@ const nextConfig = {
             key: 'Cache-Control',
             value: 'public, max-age=3600, must-revalidate',
           },
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex',
+          },
         ],
       },
     ]
@@ -104,6 +108,8 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   reactStrictMode: true,
+  // Add trailing slash configuration
+  trailingSlash: true,
 }
 
 export default nextConfig;
