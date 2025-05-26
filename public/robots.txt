@@ -35,4 +35,4 @@ Allow: /
 Allow: /$
 Allow: /services$
 Allow: /contacts$
-Allow: /about$ 
+Allow: /about$  
