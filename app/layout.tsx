@@ -77,13 +77,13 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'ru_RU',
-    url: 'https://coolfix.uz',
+    url: 'https://thecoolfix.uz',
     siteName: 'Coolfix — Ремонт кондиционеров в Ташкенте',
     title: 'Ремонт кондиционеров в Ташкенте — Coolfix | Профессиональный сервис',
     description: 'Профессиональный ремонт кондиционеров в Ташкенте. Гарантия качества. Быстрое обслуживание. Доступные цены. Выезд мастера на дом. ☎ Звоните!',
     images: [
       {
-        url: 'https://coolfix.uz/og-image.jpg',
+        url: 'https://thecoolfix.uz/coolfix_logo.png',
         width: 1200,
         height: 630,
         alt: 'Coolfix — Ремонт кондиционеров в Ташкенте',
@@ -94,11 +94,10 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Coolfix — Ремонт Кондиционеров',
     description: 'Профессиональный ремонт кондиционеров в Ташкенте. Гарантия качества и честные цены.',
-    images: ['https://coolfix.uz/og-image.jpg'],
+    images: ['https://thecoolfix.uz/coolfix_logo.png'],
   },
   verification: {
-    google: 'google0f56ed170fd28215',
-    yandex: 'your-yandex-verification',
+    google: '0lWEnCpFDT7oyG2n_B-meQPQyUeATLN18QShvPq_3so',
   },
 }
 
