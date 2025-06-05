@@ -8,9 +8,9 @@ export const metadata = {
   },
   description: 'Срочный ремонт и обслуживание кондиционеров в Ташкенте. Бесплатный выезд мастера. Гарантия до 12 месяцев. Цены от 50 000 сум. ☎ Звоните!',
   alternates: {
-    canonical: 'https://coolfix.uz',
+    canonical: 'https://thecoolfix.uz',
   },
-  metadataBase: new URL('https://coolfix.uz'),
+  metadataBase: new URL('https://thecoolfix.uz'),
   icons: {
     icon: [
       { url: '/icon.svg', type: 'image/svg+xml' }
@@ -111,7 +111,6 @@ export default function RootLayout({
       <head>
         {/* Basic SEO */}
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://thecoolfix.uz/" />
         
         {/* Additional meta tags */}
         <meta name="googlebot" content="index, follow" />
