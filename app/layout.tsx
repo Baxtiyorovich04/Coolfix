@@ -112,6 +112,63 @@ export default function RootLayout({
         {/* Basic SEO */}
         <meta name="robots" content="index, follow" />
         
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Coolfix",
+              "image": "https://thecoolfix.uz/coolfix_logo.png",
+              "url": "https://thecoolfix.uz",
+              "telephone": "+998901234567",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ташкент",
+                "addressCountry": "UZ"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "41.3111",
+                "longitude": "69.2797"
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday"
+                ],
+                "opens": "09:00",
+                "closes": "18:00"
+              },
+              "sameAs": [
+                "https://t.me/coolfix",
+                "https://instagram.com/coolfix"
+              ],
+              "priceRange": "₴₴",
+              "description": "Профессиональный ремонт кондиционеров в Ташкенте. Гарантия качества. Быстрое обслуживание. Доступные цены. Выезд мастера на дом."
+            })
+          }}
+        />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Ремонт кондиционеров в Ташкенте — Coolfix" />
+        <meta property="og:description" content="Профессиональный ремонт кондиционеров в Ташкенте. Гарантия качества. Быстрое обслуживание. Доступные цены. Выезд мастера на дом. ☎ Звоните!" />
+        <meta property="og:image" content="https://thecoolfix.uz/coolfix_logo.png" />
+        <meta property="og:url" content="https://thecoolfix.uz" />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Coolfix — Ремонт Кондиционеров" />
+        <meta name="twitter:description" content="Профессиональный ремонт кондиционеров в Ташкенте. Гарантия качества и честные цены." />
+        <meta name="twitter:image" content="https://thecoolfix.uz/coolfix_logo.png" />
+        
         {/* Additional meta tags */}
         <meta name="googlebot" content="index, follow" />
         <meta name="google" content="notranslate" />
