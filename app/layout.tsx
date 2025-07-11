@@ -160,6 +160,10 @@ export default function RootLayout({
           content="Ремонт кондиционеров в Ташкенте — Coolfix"
         />
         <meta
+          name="google-site-verification"
+          content="9tRI3_rboKcRlvxDwUG1lBO347sX5Cs_SVTyHpr3Q9Y"
+        />
+        <meta
           property="og:description"
           content="Профессиональный ремонт кондиционеров в Ташкенте. Гарантия качества. Быстрое обслуживание. Доступные цены. Выезд мастера на дом. ☎ Звоните!"
         />
