@@ -39,10 +39,13 @@ export default function Header() {
               <Link href="/" onClick={() => setIsMenuOpen(false)}>Главная</Link>
             </li>
             <li>
-              <Link href="#benefits" onClick={() => setIsMenuOpen(false)}>Преимущества</Link>
+              <Link href="/services/" onClick={() => setIsMenuOpen(false)}>Услуги</Link>
             </li>
             <li>
-              <Link href="#contacts" onClick={() => setIsMenuOpen(false)}>Контакты</Link>
+              <Link href="/about/" onClick={() => setIsMenuOpen(false)}>О нас</Link>
+            </li>
+            <li>
+              <Link href="/contacts/" onClick={() => setIsMenuOpen(false)}>Контакты</Link>
             </li>
           </ul>
         </nav>
