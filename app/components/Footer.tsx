@@ -23,23 +23,23 @@ export default function Footer() {
               <h4>Услуги</h4>
               <ul>
                 <li>
-                  <Link href="#">
+                  <a href="#services">
                     <FaTools className={styles.linkIcon} />
                     Ремонт кондиционеров 
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="#">
+                  <a href="#services">
                     <FaTools className={styles.linkIcon} />
                     Ремонт стиральных машин 
-                  </Link>
+                  </a>
                 </li>
            
                 <li>
-                  <Link href="#">
+                  <a href="#services">
                     <FaHome className={styles.linkIcon} />
                     Ремонт двухконтурных котлов
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -48,11 +48,11 @@ export default function Footer() {
               <h4>Компания</h4>
               <ul>
                 <li>
-                  <Link href="#">О нас</Link>
+                  <a href="#about">О нас</a>
                 </li>
            
                 <li>
-                  <Link href="#contacts">Контакты</Link>
+                  <a href="#contacts">Контакты</a>
                 </li>
                 <li>
                   <Link href="#">Отзывы</Link>
@@ -93,6 +93,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      {/* Секция О нас для якоря #about */}
+      <section id="about" style={{display: 'none'}} aria-hidden="true"></section>
     </footer>
   )
 }

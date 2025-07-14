@@ -42,7 +42,7 @@ export default function Benefits() {
   ];
 
   return (
-    <section id="benefits" className={styles.benefits}>
+    <section id="services" className={styles.benefits}>
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>Наши преимущества</h2>

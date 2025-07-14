@@ -1,38 +1,3 @@
-# Allow all crawlers
 User-agent: *
 Allow: /
-
-# Sitemap location
-Sitemap: https://thecoolfix.uz/sitemap.xml
-
-# Allow all assets
-Allow: /*.js
-Allow: /*.css
-Allow: /*.png
-Allow: /*.jpg
-Allow: /*.gif
-Allow: /*.svg
-Allow: /*.ico
-
-# Disallow URL parameters
-Disallow: /*?*
-Disallow: /*?utm_*
-Disallow: /*?ref=*
-
-# Allow Googlebot specifically
-User-agent: Googlebot
-Allow: /
-
-# Allow Googlebot-Image
-User-agent: Googlebot-Image
-Allow: /
-
-# Allow Googlebot-Mobile
-User-agent: Googlebot-Mobile
-Allow: /
-
-# Разрешаем индексацию основных страниц
-Allow: /$
-Allow: /services$
-Allow: /contacts$
-Allow: /about$  
+Sitemap: https://thecoolfix.uz/sitemap.xml 
